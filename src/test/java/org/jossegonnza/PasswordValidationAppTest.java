@@ -26,4 +26,10 @@ public class PasswordValidationAppTest {
         Assertions.assertThat(passwordValidation.validation("isgood_8")).isEqualTo(false);
     }
 
+    @Test
+    void password_should_be_at_least_1_lowercase_letter() {
+        PasswordValidation passwordValidation = new PasswordValidation();
+
+        Assertions.assertThat(passwordValidation.validation("ISGOOD_8")).isEqualTo(false);
+    }
 }
