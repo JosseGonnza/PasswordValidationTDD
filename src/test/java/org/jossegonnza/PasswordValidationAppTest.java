@@ -39,4 +39,12 @@ public class PasswordValidationAppTest {
 
         Assertions.assertThat(passwordValidation.validation("Isgood_a")).isEqualTo(false);
     }
+
+    @Test
+    void password_should_be_at_least_1_underScore() {
+        PasswordValidation passwordValidation = new PasswordValidation();
+
+        Assertions.assertThat(passwordValidation.validation("Isgoodaa8")).isEqualTo(false);
+    }
+
 }
