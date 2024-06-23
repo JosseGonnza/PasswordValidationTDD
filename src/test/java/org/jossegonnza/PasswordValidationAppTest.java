@@ -12,4 +12,11 @@ public class PasswordValidationAppTest {
         Assertions.assertThat(passwordValidation.validation("Isgood_8")).isEqualTo(true);
     }
 
+    @Test
+    void password_should_be_at_least_8_characters_long() {
+        PasswordValidation passwordValidation = new PasswordValidation();
+
+        Assertions.assertThat(passwordValidation.validation("Isg_8")).isEqualTo(false);
+    }
+
 }
